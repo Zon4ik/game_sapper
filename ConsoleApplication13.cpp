@@ -47,6 +47,7 @@ bool check_flag_map(char** mine_mx, char** mx, int count_flags) {
 	}
 }
 
+
 void open_cells(int y, int x, char** mine_mx, char** mx) {
 	for (int i = y - 1, s = 0; s < 3; i++, s++) {
 		for (int j = x - 1, d = 0; d < 3; j++, d++) {
@@ -192,7 +193,8 @@ char** generate_mine(char** mine_mx, int count_mine) {
 		mine_mx[y][x] = '*';
 	}
 
-	// cheak count mines
+	// check count mines
+	
 	check(mine_mx, count_mine);
 
 	for (int i = 0; i < MINE; i++) {
